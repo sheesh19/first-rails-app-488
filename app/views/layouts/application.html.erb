@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <div style='background-color: teal'>
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'About', about_path %>
+      <%= link_to 'Contact', contact_path %>
+
+      <form action="/contact" method="get">
+        <input type="text" name="member" value="<%= params[:member] %>" placeholder="Who are you looking for?">
+        <input type="submit">
+      </form>
+    </div>
+
     <%= yield %>
   </body>
 </html>
